@@ -13,7 +13,7 @@ def drawImg(sample):
 
 
 def dist(x1, x2):
-    return np.sqrt(sum((x1 - x2)**2))
+    return np.sqrt(sum((x1 - x2)**2))            # Euclidean distance
 
 
 def knn(X, Y, queryPoint, k=5):
@@ -44,5 +44,6 @@ data = train.values
 x = data[:, 1:]
 y = data[:, 0]
 tx = test.values[:, 1:]
-ty = test.values[:, 0]
+ty = test.values[:, 0] 
+print(knn(x, y, tx[4], 7))            # to predict the value of the 5th digit in the test dataset
 # print(accuracy(tx, ty))             # to find the accuracy of the algorithm
